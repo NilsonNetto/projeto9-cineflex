@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 import './MainPage.css'
 
 export default function MainPage() {
@@ -18,8 +19,10 @@ export default function MainPage() {
   function Film({ posterURL }) {
     return (
       <div className='film'>
-        <img src={posterURL}></img>
-      </div>
+        <Link to='/section'>
+          <img src={posterURL}></img>
+        </Link>
+      </div >
     )
   }
 

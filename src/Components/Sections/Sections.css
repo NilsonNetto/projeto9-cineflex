@@ -1,0 +1,39 @@
+.main {
+  margin-top: 65px;
+  margin-bottom: 115px;
+  width: 100vw;
+}
+
+.main h2 {
+  width: 100%;
+  height: 110px;
+  font-size: 24px;
+  font-weight: 400;
+  color: #293845;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  width: 100%;
+  margin: 30px 25px 0 25px;
+}
+
+.section h3 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #293845;
+}
+
+button {
+  width: 90px;
+  height: 40px;
+  margin: 20px 10px 0 0;
+  background-color: #e8833a;
+  border-radius: 3px;
+  border: 1px solid #e8833a;
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+}

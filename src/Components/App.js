@@ -15,6 +15,7 @@ export default function App() {
       <Header />
       <Routes>
         <Route path='/' element={<MainPage />} />
+        <Route path='/section' element={<Sections />} />
       </Routes>
     </BrowserRouter>
   )
