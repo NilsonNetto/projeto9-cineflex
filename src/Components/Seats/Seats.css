@@ -48,7 +48,8 @@
   border: 1px solid #f7c52b;
 }
 
-button.reserve {
+.main-seats a {
+  display: flex;
   width: 230px;
   height: 40px;
   text-decoration: none;
@@ -58,4 +59,6 @@ button.reserve {
   color: white;
   font-size: 18px;
   font-weight: 400;
+  justify-content: center;
+  align-items: center;
 }

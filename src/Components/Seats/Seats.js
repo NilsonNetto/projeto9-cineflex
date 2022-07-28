@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Seats.css'
 
 export default function Seats() {
@@ -39,7 +40,7 @@ export default function Seats() {
       <div>
         <p>CPF do comprador:</p>
       </div>
-      <button className='reserve'>Reservar assento(s)</button>
+      <Link to={'/sucesso'}>Reservar assento(s)</Link>
     </div>
   )
 }

@@ -1,0 +1,51 @@
+.main-confirmation-page {
+  margin-top: 65px;
+  margin-bottom: 115px;
+  width: 100vw;
+}
+
+.main-confirmation-page h2 {
+  width: 100%;
+  height: 110px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #247a6b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-confirmation-page div {
+  width: 100%;
+  height: 150px;
+  margin: 0 30px;
+}
+
+p {
+  font-size: 22px;
+  font-weight: 400;
+  color: #293845;
+  line-height: 26px;
+}
+
+p.title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.main-confirmation-page a {
+  display: flex;
+  width: 230px;
+  height: 40px;
+  margin: 5px auto;
+  text-decoration: none;
+  background-color: #e8833a;
+  border-radius: 3px;
+  border: 1px solid #e8833a;
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  justify-content: center;
+  align-items: center;
+}
