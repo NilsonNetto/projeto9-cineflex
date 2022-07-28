@@ -16,6 +16,7 @@ export default function App() {
       <Routes>
         <Route path='/' element={<MainPage />} />
         <Route path='/sessoes/:idFilme' element={<Sections />} />
+        <Route path='/assentos' element={<Seats />}></Route>
       </Routes>
     </BrowserRouter>
   )
