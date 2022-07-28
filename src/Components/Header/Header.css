@@ -10,8 +10,9 @@ header {
   justify-content: center;
 }
 
-header h1 {
+header a {
   font-size: 34px;
   font-weight: 400;
   color: #e8833a;
+  text-decoration: none;
 }

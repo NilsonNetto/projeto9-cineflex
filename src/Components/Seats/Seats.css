@@ -1,4 +1,4 @@
-.main {
+.main-seats {
   margin-top: 65px;
   width: 100vw;
   display: flex;
@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-.main h2 {
+.main-seats h2 {
   width: 100%;
   height: 110px;
   font-size: 24px;
@@ -51,4 +51,11 @@
 button.reserve {
   width: 230px;
   height: 40px;
+  text-decoration: none;
+  background-color: #e8833a;
+  border-radius: 3px;
+  border: 1px solid #e8833a;
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
 }

@@ -1,10 +1,10 @@
-.main {
+.main-sections {
   margin-top: 65px;
   margin-bottom: 115px;
   width: 100vw;
 }
 
-.main h2 {
+.main-sections h2 {
   width: 100%;
   height: 110px;
   font-size: 24px;
@@ -26,7 +26,13 @@
   color: #293845;
 }
 
-button {
+.section > div {
+  display: flex;
+}
+
+.section a {
+  text-decoration: none;
+  display: flex;
   width: 90px;
   height: 40px;
   margin: 20px 10px 0 0;
@@ -36,4 +42,6 @@ button {
   color: white;
   font-size: 18px;
   font-weight: 400;
+  justify-content: center;
+  align-items: center;
 }

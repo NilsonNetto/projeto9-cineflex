@@ -25,7 +25,7 @@ export default function MainPage() {
   }
 
   return (
-    <div className='main'>
+    <div className='main-initial-page'>
       <h2>Selecione o filme</h2>
       <div className='films'>
         {moviesList.map(({ id, posterURL }) => <Link to={`/sessoes/${id}`} key={id}> <Film posterURL={posterURL} /> </Link>)}

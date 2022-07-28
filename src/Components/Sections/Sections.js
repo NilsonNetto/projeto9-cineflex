@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Sections.css'
 
 export default function Sections() {
@@ -24,15 +25,17 @@ export default function Sections() {
     return (
       <div className='section'>
         <h3>{weekday} - {date}</h3>
-        {showtimes.map((time) => {
-          return (<button>{time.name}</button>)
-        })}
+        <div>
+          {showtimes.map((time) => {
+            return (<Link to={`/assentos/${time.id}`}> <p>{time.name}</p> </Link>)
+          })}
+        </div>
       </div>
     )
   }
 
   return (
-    <div className='main'>
+    <div className='main-sections'>
       <h2>Selecione o horário</h2>
       <div className='sections'>
         {movieSections.map((section, index) => <Section key={index} weekday={section.weekday} date={section.date} showtimes={section.showtimes} />)}
