@@ -15,7 +15,7 @@ export default function App() {
       <Header />
       <Routes>
         <Route path='/' element={<MainPage />} />
-        <Route path='/section' element={<Sections />} />
+        <Route path='/sessoes/:idFilme' element={<Sections />} />
       </Routes>
     </BrowserRouter>
   )

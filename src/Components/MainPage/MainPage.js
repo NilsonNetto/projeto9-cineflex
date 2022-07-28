@@ -19,9 +19,7 @@ export default function MainPage() {
   function Film({ posterURL }) {
     return (
       <div className='film'>
-        <Link to='/section'>
-          <img src={posterURL}></img>
-        </Link>
+        <img src={posterURL} alt={posterURL}></img>
       </div >
     )
   }
@@ -30,7 +28,7 @@ export default function MainPage() {
     <div className='main'>
       <h2>Selecione o filme</h2>
       <div className='films'>
-        {moviesList.map(({ id, posterURL }) => <Film key={id} posterURL={posterURL} />)}
+        {moviesList.map(({ id, posterURL }) => <Link to={`/sessoes/${id}`} key={id}> <Film posterURL={posterURL} /> </Link>)}
       </div>
 
     </div>

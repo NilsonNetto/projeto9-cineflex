@@ -1,14 +1,17 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import './Sections.css'
 
 export default function Sections() {
 
   const [movieSections, setMovieSections] = useState([]);
 
+  const { idFilme } = useParams();
+
   useEffect(() => {
 
-    const promisse = axios.get(`https://mock-api.driven.com.br/api/v5/cineflex/movies/${1}/showtimes`)
+    const promisse = axios.get(`https://mock-api.driven.com.br/api/v5/cineflex/movies/${idFilme}/showtimes`)
 
     promisse.then(res => {
       setMovieSections(res.data.days)
@@ -21,7 +24,7 @@ export default function Sections() {
     return (
       <div className='section'>
         <h3>{weekday} - {date}</h3>
-        {showtimes.map((time, index) => {
+        {showtimes.map((time) => {
           return (<button>{time.name}</button>)
         })}
       </div>
