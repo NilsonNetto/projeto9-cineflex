@@ -29,13 +29,16 @@
   height: 6vw;
   margin: 1vw;
   border-radius: 50%;
-  background-color: #c3cfd9;
   font-size: 3vw;
   font-weight: 400;
-  border: 1px solid #808f9d;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.seat.available {
+  background-color: #c3cfd9;
+  border: 1px solid #808f9d;
 }
 
 .seat.selected {
@@ -48,7 +51,21 @@
   border: 1px solid #f7c52b;
 }
 
-.main-seats a {
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.wrapper p {
+  font-size: 13px;
+  font-weight: 400;
+  color: #4e5a65;
+}
+
+.main-seats a button {
   display: flex;
   width: 230px;
   height: 40px;
@@ -61,4 +78,36 @@
   font-weight: 400;
   justify-content: center;
   align-items: center;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form div {
+  width: 90%;
+  margin: 10px auto;
+}
+
+form p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #293845;
+}
+
+input {
+  width: 95%;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 400;
+  padding-left: 10px;
+}
+
+input::placeholder {
+  font-style: italic;
+  color: #afafaf;
 }

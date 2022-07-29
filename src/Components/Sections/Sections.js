@@ -35,12 +35,15 @@ export default function Sections() {
   }
 
   return (
-    <div className='main-sections'>
-      <h2>Selecione o horário</h2>
-      <div className='sections'>
-        {movieSections.map((section, index) => <Section key={index} weekday={section.weekday} date={section.date} showtimes={section.showtimes} />)}
+    <>
+      <div className='main-sections'>
+        <h2>Selecione o horário</h2>
+        <div className='sections'>
+          {movieSections.map((section, index) => <Section key={index} weekday={section.weekday} date={section.date} showtimes={section.showtimes} />)}
 
+        </div>
       </div>
-    </div>
+      <Footer> </Footer>
+    </>
   )
 }

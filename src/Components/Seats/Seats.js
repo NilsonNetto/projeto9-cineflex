@@ -21,26 +21,44 @@ export default function Seats() {
 
   }, [])
 
+  function submitForm(e) {
+    e.preventDefault();
+
+  }
+
   return (
     <div className='main-seats'>
       <h2>Selecione o(s) assento(s)</h2>
       <div className='seats'>
         {sectionSeats.map((seat) => (
           seat.isAvailable ?
-            (<div className='seat'> {seat.name} </div>) :
+            (<div className='seat available'> {seat.name} </div>) :
             (<div className='seat unavailable'>{seat.name}</div>)
         ))}
-        <div className='seat selected'></div>
-        <div className='seat'></div>
-        <div className='seat unavailable'></div>
+        <div className='wrapper'>
+          <div className='seat selected'></div>
+          <p>Selecionado</p>
+        </div>
+        <div className='wrapper'>
+          <div className='seat available'></div>
+          <p>Disponível</p>
+        </div>
+        <div className='wrapper'>
+          <div className='seat unavailable'></div>
+          <p>Indisponível</p>
+        </div>
       </div>
-      <div>
-        <p>Nome do comprador:</p>
-      </div>
-      <div>
-        <p>CPF do comprador:</p>
-      </div>
-      <Link to={'/sucesso'}>Reservar assento(s)</Link>
+      <form onSubmit={submitForm}>
+        <div>
+          <p>Nome do comprador:</p>
+          <input type='text' placeholder='Digite seu nome...' required></input>
+        </div>
+        <div>
+          <p>CPF do comprador:</p>
+          <input type='text' placeholder='Digite seu CPF...' required></input>
+        </div>
+        <Link to={'/sucesso'}> <button>Reservar assento(s)</button></Link>
+      </form>
     </div>
   )
 }
