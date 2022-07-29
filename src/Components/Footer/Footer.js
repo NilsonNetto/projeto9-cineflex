@@ -2,6 +2,9 @@ import './Footer.css'
 
 export default function Footer({ sectionSelected, filmData }) {
 
+  console.log(sectionSelected)
+  console.log(filmData)
+
   let title = '';
   let posterURL = '';
   let name = '';
@@ -24,7 +27,7 @@ export default function Footer({ sectionSelected, filmData }) {
       </div>
       <div className='footer-movie'>
         <p>{title}</p>
-        {sectionSelected ? (<p>{weekday} - {name}</p>) : ''}
+        {sectionSelected ? <div>{weekday} - {name}</div> : ''}
       </div>
     </footer>
   )

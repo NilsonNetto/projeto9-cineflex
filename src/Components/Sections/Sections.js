@@ -14,7 +14,7 @@ export default function Sections() {
 
   useEffect(() => {
 
-    const promisse = axios.get(`https://mock-api.driven.com.br/api/v5/cineflex/movies/${idFilme}/showtimes`)
+    const promisse = axios.get(`https://mock-api.driven.com.br/api/v7/cineflex/movies/${idFilme}/showtimes`)
 
     promisse.then(res => {
       setMovieData(res.data)
@@ -22,7 +22,6 @@ export default function Sections() {
     })
 
   }, [])
-
 
   function Section({ weekday, date, showtimes }) {
     return (
