@@ -2,10 +2,12 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import Footer from '../Footer/Footer';
 import './Sections.css'
 
 export default function Sections() {
 
+  const [movieData, setMovieData] = useState({})
   const [movieSections, setMovieSections] = useState([]);
 
   const { idFilme } = useParams();
@@ -15,6 +17,7 @@ export default function Sections() {
     const promisse = axios.get(`https://mock-api.driven.com.br/api/v5/cineflex/movies/${idFilme}/showtimes`)
 
     promisse.then(res => {
+      setMovieData(res.data)
       setMovieSections(res.data.days)
     })
 
@@ -43,7 +46,7 @@ export default function Sections() {
 
         </div>
       </div>
-      <Footer> </Footer>
+      <Footer sectionSelected={false} filmData={movieData} />
     </>
   )
 }

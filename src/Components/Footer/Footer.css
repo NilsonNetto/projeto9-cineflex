@@ -1,0 +1,30 @@
+footer {
+  width: 100%;
+  height: 115px;
+  background-color: #dfe6ed;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #9eadba;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
+footer .footer-poster {
+  background-color: white;
+  border-radius: 3px;
+  padding: 7px;
+  margin: 10px 15px;
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.1);
+}
+
+footer img {
+  width: 50px;
+  height: 75px;
+}
+
+footer p {
+  font-size: 26px;
+  font-weight: 400;
+  color: #293845;
+}
