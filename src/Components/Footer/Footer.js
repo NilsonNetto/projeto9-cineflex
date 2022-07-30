@@ -2,9 +2,6 @@ import './Footer.css'
 
 export default function Footer({ sectionSelected, filmData }) {
 
-  console.log(sectionSelected)
-  console.log(filmData)
-
   let title = '';
   let posterURL = '';
   let name = '';

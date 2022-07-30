@@ -22,7 +22,7 @@
   width: 90%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .seat {
@@ -67,7 +67,7 @@
   color: #4e5a65;
 }
 
-.main-seats a button {
+.main-seats button {
   display: flex;
   width: 230px;
   height: 40px;
@@ -80,6 +80,7 @@
   font-weight: 400;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 form {

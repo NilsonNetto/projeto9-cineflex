@@ -29,10 +29,10 @@ export default function Sections() {
         <h3>{weekday} - {date}</h3>
         <div>
           {showtimes.map((time) => {
-            return (<Link to={`/assentos/${time.id}`}> <p>{time.name}</p> </Link>)
+            return (<Link to={`/assentos/${time.id}`} key={time.id}> <p>{time.name}</p> </Link>)
           })}
         </div>
-      </div>
+      </div >
     )
   }
 

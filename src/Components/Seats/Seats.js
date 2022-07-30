@@ -1,17 +1,19 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Footer from '../Footer/Footer';
 import Seat from '../Seat/Seat';
 import './Seats.css'
 
-export default function Seats() {
+export default function Seats({ reserveName, reserveCPF, reserveSeatId, setReserveName, setReserveCPF, filterSeatId, setMovieInfo }) {
 
   const { idSessao } = useParams();
+  const navigate = useNavigate();
+  const [sectionData, setSectionData] = useState({});
+  const [sectionSeats, setSectionSeats] = useState([]);
 
-  const [sectionData, setSectionData] = useState({})
-  const [sectionSeats, setSectionSeats] = useState([])
+
 
   useEffect(() => {
 
@@ -25,9 +27,21 @@ export default function Seats() {
 
   }, [])
 
-  function submitForm(e) {
+  function reserveSeats(e) {
     e.preventDefault();
 
+    setMovieInfo({
+      title: sectionData.movie.title,
+      date: sectionData.day.date,
+      showtime: sectionData.name
+    })
+
+    console.log(reserveName, reserveCPF, reserveSeatId)
+
+    //axios.post{'URL', array}
+
+
+    navigate('/sucesso')
   }
 
   return (
@@ -35,7 +49,7 @@ export default function Seats() {
       <div className='main-seats'>
         <h2>Selecione o(s) assento(s)</h2>
         <div className='seats'>
-          {sectionSeats.map((seat) => <Seat key={seat.id} seat={seat} />)
+          {sectionSeats.map((seat) => <Seat key={seat.id} seat={seat} filterSeatId={filterSeatId} />)
           }
           <div className='wrapper'>
             <div className='seat selected'></div>
@@ -50,16 +64,16 @@ export default function Seats() {
             <p>Indisponível</p>
           </div>
         </div>
-        <form onSubmit={submitForm}>
+        <form onSubmit={reserveSeats}>
           <div>
             <p>Nome do comprador:</p>
-            <input type='text' placeholder='Digite seu nome...' required></input>
+            <input type='text' placeholder='Digite seu nome...' onChange={(e) => setReserveName(e.target.value)} value={reserveName} required></input>
           </div>
           <div>
             <p>CPF do comprador:</p>
-            <input type='text' placeholder='Digite seu CPF...' required></input>
+            <input type='text' placeholder='Digite seu CPF...' onChange={(e) => setReserveCPF(e.target.value)} value={reserveCPF} required></input>
           </div>
-          <Link to={'/sucesso'}> <button>Reservar assento(s)</button></Link>
+          <button>Reservar assento(s)</button>
         </form>
 
       </div>

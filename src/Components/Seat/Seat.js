@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function Seat({ seat }) {
+export default function Seat({ seat, filterSeatId }) {
 
   const [selected, setSelected] = useState('available');
 
@@ -10,8 +10,10 @@ export default function Seat({ seat }) {
     }
     if (selected === 'available') {
       setSelected('selected');
+      filterSeatId(seat, true);
     } else {
       setSelected('available');
+      filterSeatId(seat, false);
     }
 
   }
