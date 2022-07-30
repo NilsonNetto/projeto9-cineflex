@@ -89,7 +89,7 @@ export default function Seats({ reserveName, reserveCPF, reserveSeatId, setReser
         </form>
 
       </div>
-      <Footer sectionSelected={true} filmData={sectionData} />
+      {/* <Footer sectionSelected={true} filmData={sectionData} /> */}
     </>
   )
 }

@@ -5,7 +5,7 @@
 }
 
 .main-sections h2 {
-  width: 100%;
+  width: 100vw;
   height: 110px;
   font-size: 24px;
   font-weight: 400;
@@ -15,9 +15,13 @@
   align-items: center;
 }
 
+.sections {
+  width: 100vw;
+}
+
 .section {
-  width: 100%;
-  margin: 30px 25px 0 25px;
+  width: 90%;
+  margin: 30px 25px;
 }
 
 .section h3 {
