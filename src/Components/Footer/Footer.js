@@ -24,7 +24,7 @@ export default function Footer({ sectionSelected, filmData }) {
       </div>
       <div className='footer-movie'>
         <p>{title}</p>
-        {sectionSelected ? <div>{weekday} - {name}</div> : ''}
+        {sectionSelected ? <p>{weekday} - {name}</p> : ''}
       </div>
     </footer>
   )

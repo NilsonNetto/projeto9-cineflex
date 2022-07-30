@@ -36,10 +36,13 @@ export default function Seats({ reserveName, reserveCPF, reserveSeatId, setReser
       showtime: sectionData.name
     })
 
-    console.log(reserveName, reserveCPF, reserveSeatId)
+    const body = {
+      ids: reserveSeatId,
+      name: reserveName,
+      cpf: reserveCPF
+    }
 
-    //axios.post{'URL', array}
-
+    axios.post('https://mock-api.driven.com.br/api/v7/cineflex/seats/book-many', body)
 
     navigate('/sucesso')
   }

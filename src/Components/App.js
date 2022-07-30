@@ -29,14 +29,21 @@ export default function App() {
     console.log(reserveSeatName)
   }
 
+  function clearValues() {
+    setReserveName('');
+    setReserveCPF('');
+    setReserveSeatId([]);
+    setReserveSeatName([]);
+  }
+
   return (
     <BrowserRouter>
-      <Header />
+      <Header clearValues={clearValues} />
       <Routes>
         <Route path='/' element={<MainPage />} />
         <Route path='/sessoes/:idFilme' element={<Sections />} />
         <Route path='/assentos/:idSessao' element={<Seats reserveName={reserveName} reserveCPF={reserveCPF} reserveSeatId={reserveSeatId} setReserveName={setReserveName} setReserveCPF={setReserveCPF} filterSeatId={filterSeatId} setMovieInfo={setMovieInfo} />}></Route>
-        <Route path='/sucesso' element={<ConfirmationPage reserveName={reserveName} reserveCPF={reserveCPF} reserveSeatName={reserveSeatName} movieInfo={movieInfo} />}></Route>
+        <Route path='/sucesso' element={<ConfirmationPage reserveName={reserveName} reserveCPF={reserveCPF} reserveSeatName={reserveSeatName} movieInfo={movieInfo} clearValues={clearValues} />}></Route>
       </Routes>
     </BrowserRouter>
   )

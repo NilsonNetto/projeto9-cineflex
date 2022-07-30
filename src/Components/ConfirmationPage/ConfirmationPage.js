@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import './ConfirmationPage.css'
 
-export default function ConfirmationPage({ reserveName, reserveCPF, reserveSeatName, movieInfo }) {
+export default function ConfirmationPage({ reserveName, reserveCPF, reserveSeatName, movieInfo, clearValues }) {
 
   return (
     <div className='main-confirmation-page'>
@@ -20,7 +20,7 @@ export default function ConfirmationPage({ reserveName, reserveCPF, reserveSeatN
         <p>Nome: {reserveName}</p>
         <p>CPF: {reserveCPF}</p>
       </div>
-      <Link to={'/'}>Voltar para Home</Link>
+      <Link to={'/'} onClick={clearValues}>Voltar para Home</Link>
     </div>
   )
 }
