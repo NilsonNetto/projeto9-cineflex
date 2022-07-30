@@ -2,6 +2,7 @@ import './Footer.css'
 
 export default function Footer({ sectionSelected, filmData }) {
 
+  console.log(filmData)
   let title = '';
   let posterURL = '';
   let name = '';
@@ -10,9 +11,9 @@ export default function Footer({ sectionSelected, filmData }) {
   if (!sectionSelected) {
     title = filmData.title;
     posterURL = filmData.posterURL;
-  } else {
-    title = filmData.movie.title;
-    posterURL = filmData.movie.posterURL;
+  } else if (sectionSelected) {
+    title = filmData.movie.title
+    posterURL = filmData.movie.posterURL
     name = filmData.name;
     weekday = filmData.day.weekday;
   }

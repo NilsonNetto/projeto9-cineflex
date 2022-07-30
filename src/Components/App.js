@@ -26,7 +26,6 @@ export default function App() {
       setReserveSeatId(reserveSeatId.filter(seat => !(seat === selectedSeat.id)))
       setReserveSeatName(reserveSeatName.filter(seat => !(seat.id === selectedSeat.id)))
     }
-    console.log(reserveSeatName)
   }
 
   function clearValues() {

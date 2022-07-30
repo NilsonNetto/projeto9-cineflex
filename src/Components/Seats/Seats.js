@@ -42,10 +42,19 @@ export default function Seats({ reserveName, reserveCPF, reserveSeatId, setReser
       cpf: reserveCPF
     }
 
-    axios.post('https://mock-api.driven.com.br/api/v7/cineflex/seats/book-many', body)
+    const promise = axios.post('https://mock-api.driven.com.br/api/v7/cineflex/seats/book-many', body);
+    promise.then(() => {
+      alert('Pedido reservado com sucesso!');
+      navigate('/sucesso');
+    })
+    promise.catch(res => {
+      alert('Houve um erro ao processar o seu pedido')
+      navigate('/')
+    })
 
-    navigate('/sucesso')
   }
+
+  console.log(sectionData)
 
   return (
     <>
@@ -80,7 +89,7 @@ export default function Seats({ reserveName, reserveCPF, reserveSeatId, setReser
         </form>
 
       </div>
-      {/* <Footer sectionSelected={true} filmData={sectionData} /> */}
+      <Footer sectionSelected={true} filmData={sectionData} />
     </>
   )
 }
