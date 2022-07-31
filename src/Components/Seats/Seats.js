@@ -54,8 +54,6 @@ export default function Seats({ reserveName, reserveCPF, reserveSeatId, setReser
 
   }
 
-  console.log(sectionData)
-
   return (
     <>
       <div className='main-seats'>
@@ -79,11 +77,23 @@ export default function Seats({ reserveName, reserveCPF, reserveSeatId, setReser
         <form onSubmit={reserveSeats}>
           <div>
             <p>Nome do comprador:</p>
-            <input type='text' placeholder='Digite seu nome...' onChange={(e) => setReserveName(e.target.value)} value={reserveName} required></input>
+            <input type='text'
+              placeholder='Digite seu nome...'
+              onChange={(e) => setReserveName(e.target.value)}
+              value={reserveName}
+              required>
+
+            </input>
           </div>
           <div>
             <p>CPF do comprador:</p>
-            <input type='text' placeholder='Digite seu CPF...' onChange={(e) => setReserveCPF(e.target.value)} value={reserveCPF} required></input>
+            <input type='text'
+              placeholder='Digite seu CPF...'
+              onChange={(e) => setReserveCPF(e.target.value)}
+              value={reserveCPF}
+              pattern="([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})"
+              required>
+            </input>
           </div>
           <button>Reservar assento(s)</button>
         </form>
