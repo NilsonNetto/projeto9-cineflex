@@ -18,11 +18,6 @@ export default function Footer({ sectionSelected, filmData }) {
     weekday = filmData.day.weekday;
   }
 
-  if (filmData === {}) {
-    return (
-      <h1>Loading...</h1>
-    )
-  }
   return (
     <footer>
       <div className='footer-poster'>

@@ -10,7 +10,7 @@ export default function Seats({ reserveName, reserveCPF, reserveSeatId, setReser
 
   const { idSessao } = useParams();
   const navigate = useNavigate();
-  const [sectionData, setSectionData] = useState({});
+  const [sectionData, setSectionData] = useState(null);
   const [sectionSeats, setSectionSeats] = useState([]);
 
 
@@ -53,7 +53,7 @@ export default function Seats({ reserveName, reserveCPF, reserveSeatId, setReser
     })
 
   }
-  console.log(sectionData)
+
   return (
     <>
       <div className='main-seats'>
@@ -99,7 +99,7 @@ export default function Seats({ reserveName, reserveCPF, reserveSeatId, setReser
         </form>
 
       </div>
-      {/* <Footer sectionSelected={true} filmData={sectionData} /> */}
+      {sectionData !== null ? (<Footer sectionSelected={true} filmData={sectionData} />) : <h1>Carregando..</h1>}
     </>
   )
 }
