@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useState } from 'react';
 import './ConfirmationPage.css'
 
 export default function ConfirmationPage({ reserveName, reserveCPF, reserveSeatName, movieInfo, clearValues }) {

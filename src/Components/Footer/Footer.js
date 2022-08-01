@@ -5,7 +5,7 @@ export default function Footer({ sectionSelected, filmData }) {
   console.log(filmData)
   let title = '';
   let posterURL = '';
-  let name = '';
+  let time = '';
   let weekday = '';
 
   if (!sectionSelected) {
@@ -14,7 +14,7 @@ export default function Footer({ sectionSelected, filmData }) {
   } else if (sectionSelected) {
     title = filmData.movie.title
     posterURL = filmData.movie.posterURL
-    name = filmData.name;
+    time = filmData.name;
     weekday = filmData.day.weekday;
   }
 
@@ -25,7 +25,7 @@ export default function Footer({ sectionSelected, filmData }) {
       </div>
       <div className='footer-movie'>
         <p>{title}</p>
-        {sectionSelected ? <p>{weekday} - {name}</p> : ''}
+        {sectionSelected ? <p>{weekday} - {time}</p> : ''}
       </div>
     </footer>
   )
