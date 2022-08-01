@@ -11,13 +11,18 @@ export default function Footer({ sectionSelected, filmData }) {
   if (!sectionSelected) {
     title = filmData.title;
     posterURL = filmData.posterURL;
-  } else if (sectionSelected) {
+  } else {
     title = filmData.movie.title
     posterURL = filmData.movie.posterURL
     time = filmData.name;
     weekday = filmData.day.weekday;
   }
 
+  if (filmData === {}) {
+    return (
+      <h1>Loading...</h1>
+    )
+  }
   return (
     <footer>
       <div className='footer-poster'>

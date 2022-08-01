@@ -53,7 +53,7 @@ export default function Seats({ reserveName, reserveCPF, reserveSeatId, setReser
     })
 
   }
-
+  console.log(sectionData)
   return (
     <>
       <div className='main-seats'>

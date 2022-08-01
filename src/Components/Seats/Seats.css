@@ -38,6 +38,20 @@
   cursor: pointer;
 }
 
+.seat:hover {
+  animation: pop 0.3s linear;
+}
+
+@keyframes pop {
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.seat:active {
+  transform: translate(3px, 3px);
+}
+
 .seat.available {
   background-color: #c3cfd9;
   border: 1px solid #808f9d;
@@ -81,6 +95,10 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+
+.main-seats button:active {
+  transform: translate(3px, 3px);
 }
 
 form {

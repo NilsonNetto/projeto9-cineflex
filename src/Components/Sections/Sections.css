@@ -49,3 +49,17 @@
   justify-content: center;
   align-items: center;
 }
+
+.section a:hover {
+  animation: pop 0.3s linear;
+}
+
+@keyframes pop {
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.section a:active {
+  transform: translate(3px, 3px);
+}

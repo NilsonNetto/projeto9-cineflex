@@ -29,6 +29,16 @@
   box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.1);
 }
 
+.films a:hover {
+  animation: pop 0.4s linear;
+}
+
+@keyframes pop {
+  50% {
+    transform: scale(1.1);
+  }
+}
+
 .film img {
   width: 100%;
   height: 100%;
